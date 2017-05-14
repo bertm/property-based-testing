@@ -1,0 +1,17 @@
+package nl.quintor.kennissessie.pbt;
+
+import com.pholser.junit.quickcheck.generator.InRange;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.*;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+@Target({PARAMETER, FIELD, ANNOTATION_TYPE, TYPE_USE})
+@Retention(RUNTIME)
+@InRange(
+        minChar = 0x30, maxChar = 0x7A
+)
+public @interface ReadableCharacter {
+}
