@@ -14,7 +14,6 @@ import static org.hamcrest.Matchers.*;
 /**
  * A simple but problematic property test for our String splitter.
  */
-@Ignore
 @RunWith(JUnitQuickcheck.class)
 public class StringUtilsPropertyTest1 {
 

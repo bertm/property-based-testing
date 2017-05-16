@@ -17,7 +17,6 @@ import static org.junit.Assume.assumeThat;
 /**
  * A slightly less problematic property test for our String splitter.
  */
-@Ignore
 @RunWith(JUnitQuickcheck.class)
 public class StringUtilsPropertyTest2 {
 
@@ -35,10 +34,10 @@ public class StringUtilsPropertyTest2 {
         assumeThat(toSplit, not(containsString(Character.toString(delimiter))));
         final String withoutDelimiter = toSplit.replace(Character.toString(delimiter), "");
         assertThat(splitAt(delimiter, withoutDelimiter),
-                is(Arrays.asList(toSplit)));
+                is(Arrays.asList(withoutDelimiter)));
     }
 
-    @Property(trials = 10)
+    @Property
     public void splitAt_SplitsDoNotContainDelimiter(
             @ReadableCharacter final char delimiter, @ReadableString final String toSplit) {
         assumeThat(toSplit, containsString(Character.toString(delimiter)));

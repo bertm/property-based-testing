@@ -15,7 +15,6 @@ import static org.hamcrest.Matchers.*;
 /**
  * A better property test for our String splitter.
  */
-@Ignore
 @RunWith(JUnitQuickcheck.class)
 public class StringUtilsPropertyTest3 {
 
@@ -34,7 +33,7 @@ public class StringUtilsPropertyTest3 {
             final char delimiter = toSplit.charAt(i);
             final String withoutDelimiter = toSplit.replace(Character.toString(delimiter), "");
             assertThat(splitAt(delimiter, withoutDelimiter),
-                    is(Arrays.asList(toSplit)));
+                    is(Arrays.asList(withoutDelimiter)));
         }
     }
 
