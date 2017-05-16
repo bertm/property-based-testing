@@ -33,7 +33,6 @@ public class ListUtils {
      * Returns a new list containing all elements of the given list in sorted order.
      */
     public static <T extends Comparable<T>> List<T> sort(final List<T> list) {
-        /*
         final List<T> remaining = new LinkedList<>(list);
         final List<T> sorted = new ArrayList<>();
         while (!remaining.isEmpty()) {
@@ -42,10 +41,6 @@ public class ListUtils {
             sorted.add(min);
         }
         return sorted;
-        */
-
-        // Minimal implementation that makes the test pass
-        return reverse(list);
     }
 
     /**
@@ -66,23 +61,13 @@ public class ListUtils {
      * Returns the smallest element of the given list.
      */
     public static <T extends Comparable<T>> T smallest(final List<T> list) {
-        /*
         return Collections.min(list);
-        */
-
-        // Why would anyone pass a non-sorted list? ;)
-        return first(list);
     }
 
     /**
      * Returns the greatest element of the given list.
      */
     public static <T extends Comparable<T>> T greatest(final List<T> list) {
-        /*
         return Collections.max(list);
-        */
-
-        // Why would anyone pass a non-sorted list? ;)
-        return last(list);
     }
 }

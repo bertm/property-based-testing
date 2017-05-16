@@ -4,6 +4,7 @@ import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import nl.quintor.kennissessie.pbt.ReadableCharacter;
 import nl.quintor.kennissessie.pbt.ReadableString;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import static nl.quintor.kennissessie.pbt.strings.StringUtils.splitAt;
@@ -13,6 +14,7 @@ import static org.hamcrest.Matchers.*;
 /**
  * A simple but problematic property test for our String splitter.
  */
+@Ignore
 @RunWith(JUnitQuickcheck.class)
 public class StringUtilsPropertyTest1 {
 
